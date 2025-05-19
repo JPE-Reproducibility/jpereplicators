@@ -1,1 +1,1 @@
-Sitemap: git@github-jpe:jpedataeditor/jpedataeditor.github.io.git/sitemap.xml
+Sitemap: git@github-jpe:JPE-Reproducibility/jpereplicators.git/sitemap.xml

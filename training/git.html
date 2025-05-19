@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Replicate/Reproduce papers published at the EJ – JPE Data Editor</title>
+<title>Git Intro Workshop – JPE Replicator Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/jpeicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-79108a0fc1995748cbd19a5b0e3e3e7c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/jpeicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-eed81839940661de66980311c7016588.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,12 +105,59 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <div id="quarto-announcement" data-announcement-id="661abbd4cddc2c100943dc6157eb023e" class="alert alert-warning hidden"><i class="bi bi-cone-striped quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>This website is being built at the moment. Official Launch July 1st 2025.</p>
+</div></div>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../training/git.html">Training Materials</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/jpe.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../training/git.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Training Materials</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../replicator-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -83,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Replicate/Reproduce papers published at the EJ</h1>
+<h1 class="title">Git Intro Workshop</h1>
 </div>
 
 
@@ -100,10 +182,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Looking for reproducible papers to reproduce or replicate? The Economic Journal started publishing the replication packages along with the papers on the Journal’s website a long time ago. Starting December 2019, when the first Data Editor was appointed, these packages went through reproducibility checks. Since April 2021, all replication packages are published at the <a href="?var:jpe.zenodo">Economic Journal’s community of Zenodo</a>:</p>
-<p><img src="./img/zenodo1.png" class="img-fluid"></p>
+<section id="pre-workshop-setup-guide-git-github-https-authentication" class="level1">
+<h1>🛠️ Pre-Workshop Setup Guide: Git + GitHub (HTTPS Authentication)</h1>
+<p>Welcome to the Git Workshop! Follow these steps <strong>before the session</strong> to make sure you’re ready to use Git and GitHub with HTTPS authentication.</p>
+<hr>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">✅ Prerequisites</h2>
+<p>Make sure you have:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Git installed (check with <code>git --version</code>)</label></li>
+<li><label><input type="checkbox" checked="">A GitHub account (https://github.com)</label></li>
+<li><label><input type="checkbox" checked="">A working terminal (e.g.&nbsp;Git Bash on Windows, Terminal on macOS/Linux)</label></li>
+</ul>
+<hr>
+</section>
+<section id="step-1-set-up-git-credential-storage" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-set-up-git-credential-storage">🔐 Step 1: Set Up Git Credential Storage</h2>
+<p>To avoid entering your credentials every time, configure Git to store them securely.</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">🔹 Windows</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager-core</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="macos" class="level3">
+<h3 class="anchored" data-anchor-id="macos">🔹 macOS</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper osxkeychain</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="linux" class="level3">
+<h3 class="anchored" data-anchor-id="linux">🔹 Linux</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>💡 You only need to run this once per system.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="step-2-generate-a-personal-access-token-pat" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-generate-a-personal-access-token-pat">🧾 Step 2: Generate a Personal Access Token (PAT)</h2>
+<ol type="1">
+<li>Visit: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
+<li>Click <strong>“Generate new token (classic)”</strong></li>
+<li>Fill in the form:
+<ul>
+<li><strong>Note</strong>: <code>Git Workshop Token</code></li>
+<li><strong>Expiration</strong>: <code>90 days</code></li>
+<li><strong>Scopes</strong>:
+<ul>
+<li>✅ <code>repo</code> – full access to GitHub repositories</li>
+<li>✅ <code>workflow</code> – allows triggering and viewing GitHub Actions</li>
+</ul></li>
+</ul></li>
+<li>Click <strong>Generate token</strong></li>
+<li><strong>Copy the token now</strong> — you won’t be able to see it again.<br>
+➤ Save it in a <strong>safe place on your computer</strong>, like a plain text file:<br>
+<code>my-github-token.txt</code></li>
+</ol>
+<hr>
+</section>
+<section id="step-3-test-your-https-setup" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-test-your-https-setup">☑️ Step 3: Test Your HTTPS Setup</h2>
+<p>Run the following command to verify that Git can connect to GitHub using HTTPS:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> ls-remote https://github.com/github/gitignore.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You will be prompted for your GitHub <strong>username</strong> and your <strong>Personal Access Token</strong> as the password.</p>
+<ul>
+<li>✅ If it returns a list of references (e.g.&nbsp;<code>refs/heads/main</code>), you’re ready.</li>
+<li>❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.</li>
+</ul>
+<hr>
+</section>
+<section id="step-4-set-your-git-identity" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-set-your-git-identity">🧑‍💻 Step 4: Set Your Git Identity</h2>
+<p>Set your name and email so commits are properly attributed.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Full Name"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.</p>
+<hr>
+</section>
+<section id="final-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="final-checklist">✅ Final Checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Git installed and working</label></li>
+<li><label><input type="checkbox">GitHub account ready</label></li>
+<li><label><input type="checkbox">Credential helper configured</label></li>
+<li><label><input type="checkbox">Personal Access Token created and saved</label></li>
+<li><label><input type="checkbox">Test command (<code>git ls-remote</code>) successful</label></li>
+<li><label><input type="checkbox">Git name and email configured</label></li>
+</ul>
+<p>You’re now ready for the workshop!</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -196,7 +364,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("git@github-jpe:jpedataeditor\/jpedataeditor\.github\.io\.git");
+      var filterRegex = new RegExp("git@github-jpe:JPE-Reproducibility\/jpereplicators\.git");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
