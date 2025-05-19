@@ -1,57 +1,11 @@
 ---
-title: "Journal of Political Economy <br> Data Editor Website"
-# title-block-banner: rgb(133, 214, 202)
-# title-block-banner-color: rgb(255, 255, 255)
-# include-in-header:
-#   - text: |
-#       <style>
-#       #title-block-header.quarto-title-block.default .quarto-title-meta {
-#         color:rgb(255, 255, 255);
-#       }
-#       .quarto-title-block .quarto-title-banner {
-#         height: 300;
-#       }
-#       #title-block-header {
-#         background-image: url(jpe.jpg);
-#         background-size: cover;
-#         background-position-x: right;
-#         height: 400px;
-#       }
-#       </style>
+title: "Journal of Political Economy <br> Replicator Website"
 ---
 
-This website provides all the relevant information regarding the Data and Code Availability Policy and pre-acceptance reproducibility checks implemented at the [{{< var jpe.long >}}]({{< var jpe.url >}}). 
 
 
-Draft of [JPE Data and Code Policy](policy.qmd) - planned to go into effect on July 1st 2025.
-<!-- 
-<br>
-[**Before Submitting Your Package**](before.qmd){.btn .btn-secondary .btn role="button"}
-
-Learn about our Data and Code Availability Policy, possible exemptions to it, and make sure you comply with all requirements before you submit the paper for the first time. Exemptions can only be granted if you apply _when you first submit your paper_.
-
-<br>
-[**Best Practices**](best.qmd){.btn .btn-secondary .btn role="button"}
-
-Have a look at our list recommended best practices for putting together a replication package which will go through the process as smooth as possible. Our mission is to help you with that.
-
-<br>
-[**Preparing the package**](package.qmd){.btn .btn-secondary .btn role="button"}
-
-Learn how to prepare and submit your replication package. We give you precise step by step guidance throughout the process.
-
-<br>
-[**Frequently Asked Questions**](faqs.qmd){.btn .btn-secondary .btn role="button"}
-
-We have collected a _long_ list of good questions and our answers regarding many different aspects of the process, so maybe those can clarify some queries you may have.
-
-<br>
-[**Replicate EJ Papers**](replicate.qmd){.btn .btn-secondary .btn role="button"}
-
-Looking for papers which have been checked for reproducibility and which you want to replicate? Have a look at our community on [dataverse.org]({{< var jpe.dataverse >}})
--->
-<br> 
+This website provides all the relevant infos and training materials for replicators at the [{{< var jpe.long >}}]({{< var jpe.url >}}). 
 
 
+The site is work in progress as you can see, so check back soon.
 
-Find out more about the JPE Data Editor [here](de.qmd).

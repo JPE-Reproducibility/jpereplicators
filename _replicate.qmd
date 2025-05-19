@@ -1,8 +1,0 @@
----
-title: "Replicate/Reproduce papers published at the EJ"
----
-
-
-Looking for reproducible papers to reproduce or replicate? The Economic Journal started publishing the replication packages along with the papers on the Journal's website a long time ago. Starting December 2019, when the first Data Editor was appointed, these packages went through reproducibility checks. Since April 2021, all replication packages are published at the [Economic Journal's community of Zenodo]({{< var jpe.zenodo >}}): 
-
-![](/img/zenodo1.png)

@@ -1,10 +1,8 @@
 project:
   type: website
-  post-render:
-    - "cp -rv static/. _site/"
 
 website:
-  title: "{{< var jpe.short >}} Data Editor"
+  title: "{{< var jpe.short >}} Replicator Website"
   favicon: img/jpeicon.png
   page-footer: 
     left: "{{< var jpe.short >}} Data Editor: [{{< var de.mail >}}]({{< var de.mail >}}) <br> {{< var jpe.short >}} Journal Office: [{{< var jpe.mail >}}]({{< var jpe.mail >}})"
@@ -26,23 +24,8 @@ website:
     logo: img/jpe.jpg
     alignment: left
     contents: 
-      - href: policy.qmd
-        text: Code and Data Policy      
-      - href: de.qmd
-        text: Data Editor
+      - href: training/git.qmd
+        text: Training Materials
+      - href: replicator-resources.qmd
+        text: Resources
       
-  google-analytics:
-    tracking-id: "G-48S9X9V28L"
-    anonymize-ip: true
-  cookie-consent: true
-
-# format:
-#   html:
-#     theme: 
-#       - cosmo
-#       - mytheme.scss
-#     toc: true
-#     linkcolor: black
-
-
-

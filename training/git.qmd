@@ -1,0 +1,102 @@
+---
+title: "Git Intro Workshop"
+---
+
+
+# 🛠️ Pre-Workshop Setup Guide: Git + GitHub (HTTPS Authentication)
+
+Welcome to the Git Workshop! Follow these steps **before the session** to make sure you're ready to use Git and GitHub with HTTPS authentication.
+
+---
+
+## ✅ Prerequisites
+
+Make sure you have:
+
+- [x] Git installed (check with `git --version`)
+- [x] A GitHub account (https://github.com)
+- [x] A working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)
+
+---
+
+## 🔐 Step 1: Set Up Git Credential Storage
+
+To avoid entering your credentials every time, configure Git to store them securely.
+
+### 🔹 Windows
+
+```bash
+git config --global credential.helper manager-core
+```
+
+### 🔹 macOS
+
+```bash
+git config --global credential.helper osxkeychain
+```
+
+### 🔹 Linux
+
+```bash
+git config --global credential.helper cache
+```
+
+> 💡 You only need to run this once per system.
+
+---
+
+## 🧾 Step 2: Generate a Personal Access Token (PAT)
+
+1. Visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+2. Click **"Generate new token (classic)"**
+3. Fill in the form:
+   - **Note**: `Git Workshop Token`
+   - **Expiration**: `90 days`
+   - **Scopes**:
+     - ✅ `repo` – full access to GitHub repositories
+     - ✅ `workflow` – allows triggering and viewing GitHub Actions
+4. Click **Generate token**
+5. **Copy the token now** — you won’t be able to see it again.  
+   ➤ Save it in a **safe place on your computer**, like a plain text file:  
+   `my-github-token.txt`
+
+---
+
+## ☑️ Step 3: Test Your HTTPS Setup
+
+Run the following command to verify that Git can connect to GitHub using HTTPS:
+
+```bash
+git ls-remote https://github.com/github/gitignore.git
+```
+
+You will be prompted for your GitHub **username** and your **Personal Access Token** as the password.
+
+- ✅ If it returns a list of references (e.g. `refs/heads/main`), you're ready.
+- ❌ If authentication fails, double-check that your token has the correct scopes and hasn't expired.
+
+---
+
+## 🧑‍💻 Step 4: Set Your Git Identity
+
+Set your name and email so commits are properly attributed.
+
+```bash
+git config --global user.name "Your Full Name"
+git config --global user.email "you@example.com"
+```
+
+Notice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.
+
+---
+
+## ✅ Final Checklist
+
+- [ ] Git installed and working
+- [ ] GitHub account ready
+- [ ] Credential helper configured
+- [ ] Personal Access Token created and saved
+- [ ] Test command (`git ls-remote`) successful
+- [ ] Git name and email configured
+
+You're now ready for the workshop!
