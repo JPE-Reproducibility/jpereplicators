@@ -9,7 +9,7 @@ website:
     center: "© [Florian Oswald](https://floswald.github.io) {{< var de.year >}}"
     right:
       - icon: github
-        href: https://github.com/jpedataeditor
+        href: https://github.com/JPE-Reproducibility/jpereplicators
 
   # temporary
   announcement: 
@@ -24,8 +24,10 @@ website:
     logo: img/jpe.jpg
     alignment: left
     contents: 
-      - href: training/git.qmd
-        text: Training Materials
+      - href: training/git-prereq.qmd
+        text: Pre workshop
+      - href: training/git-slides.qmd
+        text: Git workshop        
       - href: replicator-resources.qmd
         text: Resources
       

@@ -3,39 +3,41 @@ title: "Git Intro Workshop"
 ---
 
 
-# 🛠️ Pre-Workshop Setup Guide: Git + GitHub (HTTPS Authentication)
+## 🛠️ Pre-Workshop Setup Guide: VScode + Git + GitHub (HTTPS Authentication)
 
 Welcome to the Git Workshop! Follow these steps **before the session** to make sure you're ready to use Git and GitHub with HTTPS authentication.
 
 ---
 
-## ✅ Prerequisites
+### ✅ Prerequisites
 
 Make sure you have:
 
 - [x] Git installed (check with `git --version`)
 - [x] A GitHub account (https://github.com)
 - [x] A working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)
+- [x] VScode installed, otherwise click [here](https://code.visualstudio.com/download). You need this tool to write reports.
+- [ ] You can download the Github GUI for your OS as well: https://desktop.github.com/download/. This is helpful for authentication issues (authenticates seamlessly).
 
 ---
 
-## 🔐 Step 1: Set Up Git Credential Storage
+### 🔐 Step 1: Set Up Git Credential Storage
 
 To avoid entering your credentials every time, configure Git to store them securely.
 
-### 🔹 Windows
+#### 🔹 Windows
 
 ```bash
 git config --global credential.helper manager-core
 ```
 
-### 🔹 macOS
+#### 🔹 macOS
 
 ```bash
 git config --global credential.helper osxkeychain
 ```
 
-### 🔹 Linux
+#### 🔹 Linux
 
 ```bash
 git config --global credential.helper cache
@@ -45,7 +47,7 @@ git config --global credential.helper cache
 
 ---
 
-## 🧾 Step 2: Generate a Personal Access Token (PAT)
+### 🧾 Step 2: Generate a Personal Access Token (PAT)
 
 1. Visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 2. Click **"Generate new token (classic)"**
@@ -62,7 +64,7 @@ git config --global credential.helper cache
 
 ---
 
-## ☑️ Step 3: Test Your HTTPS Setup
+### ☑️ Step 3: Test Your HTTPS Setup
 
 Run the following command to verify that Git can connect to GitHub using HTTPS:
 
@@ -77,7 +79,7 @@ You will be prompted for your GitHub **username** and your **Personal Access Tok
 
 ---
 
-## 🧑‍💻 Step 4: Set Your Git Identity
+### 🧑‍💻 Step 4 (Optional): Set Your Git Identity
 
 Set your name and email so commits are properly attributed.
 
@@ -86,13 +88,12 @@ git config --global user.name "Your Full Name"
 git config --global user.email "you@example.com"
 ```
 
-Notice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.
-
 ---
 
 ## ✅ Final Checklist
 
 - [ ] Git installed and working
+- [ ] VSCode installed
 - [ ] GitHub account ready
 - [ ] Credential helper configured
 - [ ] Personal Access Token created and saved

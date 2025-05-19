@@ -1,0 +1,132 @@
+---
+title: "Git Version Control"
+format: 
+    revealjs:
+        theme: _extensions/grantmcdermott/clean/clean.scss
+        chalkboard: false
+        logo: /img/jpeicon.png
+        footer: "JPE Replicator Training Material"
+        incremental: false
+        code-line-numbers: false
+        highlight-style: github
+        slide-number: true
+author: 
+  - name: Florian Oswald
+    orcid: 0000-0001-7737-2038
+    email: jpe.dataeditor@gmail.com
+    affiliations: Uni Turin, Collegio Carlo Alberto, SciencesPo Paris, JPE Data Editor
+---
+
+
+
+## 🆚 Git vs. Dropbox for Version Control
+
+
+::: {style="font-size: 70%;"}
+
+| Feature                      | Git                                    | Dropbox                                |
+|-----------------------------|----------------------------------------|----------------------------------------|
+| Version History             | Full commit history with messages      | Keeps older versions, no clear log     |
+| Understanding Changes       | Line-by-line diffs, commit messages    | No diffs, no context for changes       |
+| Branching & Merging         | Yes — supports parallel development    | No — one version at a time             |
+| Collaboration               | Designed for multiple developers       | Risk of overwrite when editing together|
+| Offline Access              | Fully local; sync when ready           | Needs internet to sync versions        |
+| Project Structure           | Tracks full directory state            | Syncs files individually               |
+| Intended Use                | Code & structured text, reproducibility| General file storage and backup        |
+
+:::
+
+
+* ✅ **Git** is a professional-grade version control system.  
+* 📦 **Dropbox** is great for basic backups, not for collaborative code development.
+
+
+## Tracking Things
+
+* We only track code (i.e. text files!) with version control.
+* (We can track small datasets. Github has a 100MB file size limit)
+* In our JPE org, we will *never* track data with version control.
+* Data will be downloaded directly from the dataverse deposit, where authors submit their packages.
+
+## Preview of JPE Workflow
+
+1. Each paper will get a github repository.
+2. The repo contains 
+   1. all code contained in the package
+   2. the paper and the appendix pdfs, 
+   3. template code with my tools, 
+   4. and the reports I prepare for you and which you will edit.
+3. You will *not* send me emails with pdfs, but you will _push a commit to this repo_.
+
+::: {.fragment}
+
+::: {.callout-tip}
+
+# if you have been following along 🧐
+
+What is not contained in the repo?
+
+:::
+:::
+
+
+## Open your VScode
+
+1. Explain program
+2. create directory under your home directory (or anywhere really)
+3. create a text file
+4. open terminal (shift-cmd-P and type `terminal`)
+5. create text file in terminal:
+
+```bash
+echo "This is the first version of the file." > notes.txt
+```
+
+## is this `git`?
+
+
+```
+git status
+```
+
+
+::: {.fragment}
+
+* error. not a git repo. not tracking anything.
+* Alright, let's start tracking.
+
+```
+git init
+```
+:::
+
+
+## `git status`
+
+* `git status` informs you about the current status of the repo.
+* Let's record the current state. 
+* We need to first select which files to record (with `git add`), then we actually add them to history with `git commit`.
+
+## let's add some code
+
+
+```R
+# add to code.R
+print("hi! drawing a random number")
+timestamp()
+runif(1)
+```
+
+## Let's add a readme
+
+[like here](https://floswald.github.io/ScPoProgramming/05-git.html#/adding-a-readme)
+
+
+
+## Resources
+
+1. [ScPoProgramming](https://floswald.github.io/ScPoProgramming/05-git.html)
+2. Getting Started with [github Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
+
+
+
