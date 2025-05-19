@@ -182,33 +182,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="pre-workshop-setup-guide-git-github-https-authentication" class="level1">
-<h1>🛠️ Pre-Workshop Setup Guide: Git + GitHub (HTTPS Authentication)</h1>
+<section id="pre-workshop-setup-guide-vscode-git-github-https-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="pre-workshop-setup-guide-vscode-git-github-https-authentication">🛠️ Pre-Workshop Setup Guide: VScode + Git + GitHub (HTTPS Authentication)</h2>
 <p>Welcome to the Git Workshop! Follow these steps <strong>before the session</strong> to make sure you’re ready to use Git and GitHub with HTTPS authentication.</p>
 <hr>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">✅ Prerequisites</h2>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">✅ Prerequisites</h3>
 <p>Make sure you have:</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked="">Git installed (check with <code>git --version</code>)</label></li>
 <li><label><input type="checkbox" checked="">A GitHub account (https://github.com)</label></li>
 <li><label><input type="checkbox" checked="">A working terminal (e.g.&nbsp;Git Bash on Windows, Terminal on macOS/Linux)</label></li>
+<li><label><input type="checkbox" checked="">VScode installed, otherwise click <a href="https://code.visualstudio.com/download">here</a></label></li>
 </ul>
 <hr>
 </section>
-<section id="step-1-set-up-git-credential-storage" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-set-up-git-credential-storage">🔐 Step 1: Set Up Git Credential Storage</h2>
+<section id="step-1-set-up-git-credential-storage" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-set-up-git-credential-storage">🔐 Step 1: Set Up Git Credential Storage</h3>
 <p>To avoid entering your credentials every time, configure Git to store them securely.</p>
-<section id="windows" class="level3">
-<h3 class="anchored" data-anchor-id="windows">🔹 Windows</h3>
+<section id="windows" class="level4">
+<h4 class="anchored" data-anchor-id="windows">🔹 Windows</h4>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager-core</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="macos" class="level3">
-<h3 class="anchored" data-anchor-id="macos">🔹 macOS</h3>
+<section id="macos" class="level4">
+<h4 class="anchored" data-anchor-id="macos">🔹 macOS</h4>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper osxkeychain</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="linux" class="level3">
-<h3 class="anchored" data-anchor-id="linux">🔹 Linux</h3>
+<section id="linux" class="level4">
+<h4 class="anchored" data-anchor-id="linux">🔹 Linux</h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <blockquote class="blockquote">
 <p>💡 You only need to run this once per system.</p>
@@ -216,8 +217,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="step-2-generate-a-personal-access-token-pat" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-generate-a-personal-access-token-pat">🧾 Step 2: Generate a Personal Access Token (PAT)</h2>
+<section id="step-2-generate-a-personal-access-token-pat" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-generate-a-personal-access-token-pat">🧾 Step 2: Generate a Personal Access Token (PAT)</h3>
 <ol type="1">
 <li>Visit: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
 <li>Click <strong>“Generate new token (classic)”</strong></li>
@@ -238,8 +239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <hr>
 </section>
-<section id="step-3-test-your-https-setup" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-test-your-https-setup">☑️ Step 3: Test Your HTTPS Setup</h2>
+<section id="step-3-test-your-https-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-test-your-https-setup">☑️ Step 3: Test Your HTTPS Setup</h3>
 <p>Run the following command to verify that Git can connect to GitHub using HTTPS:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> ls-remote https://github.com/github/gitignore.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You will be prompted for your GitHub <strong>username</strong> and your <strong>Personal Access Token</strong> as the password.</p>
@@ -249,18 +250,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="step-4-set-your-git-identity" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-set-your-git-identity">🧑‍💻 Step 4: Set Your Git Identity</h2>
+<section id="step-4-optional-set-your-git-identity" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-optional-set-your-git-identity">🧑‍💻 Step 4 (Optional): Set Your Git Identity</h3>
 <p>Set your name and email so commits are properly attributed.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Full Name"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.</p>
 <hr>
+</section>
 </section>
 <section id="final-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="final-checklist">✅ Final Checklist</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">Git installed and working</label></li>
+<li><label><input type="checkbox">VSCode installed</label></li>
 <li><label><input type="checkbox">GitHub account ready</label></li>
 <li><label><input type="checkbox">Credential helper configured</label></li>
 <li><label><input type="checkbox">Personal Access Token created and saved</label></li>
@@ -270,7 +272,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You’re now ready for the workshop!</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -703,7 +704,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jpedataeditor">
+    <a class="nav-link" href="https://github.com/JPE-Reproducibility/jpereplicators">
       <i class="bi bi-github" role="img">
 </i> 
     </a>

@@ -11,57 +11,17 @@
     "href": "training/git.html",
     "title": "Git Intro Workshop",
     "section": "",
-    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"\nNotice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.\n\n\n\n\n\nGit installed and working\nGitHub account ready\nCredential helper configured\nPersonal Access Token created and saved\nTest command (git ls-remote) successful\nGit name and email configured\n\nYou’re now ready for the workshop!",
+    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
     "crumbs": [
       "Training Materials"
     ]
   },
   {
-    "objectID": "training/git.html#prerequisites",
-    "href": "training/git.html#prerequisites",
+    "objectID": "training/git.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
+    "href": "training/git.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
     "title": "Git Intro Workshop",
     "section": "",
-    "text": "Make sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)",
-    "crumbs": [
-      "Training Materials"
-    ]
-  },
-  {
-    "objectID": "training/git.html#step-1-set-up-git-credential-storage",
-    "href": "training/git.html#step-1-set-up-git-credential-storage",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "To avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.",
-    "crumbs": [
-      "Training Materials"
-    ]
-  },
-  {
-    "objectID": "training/git.html#step-2-generate-a-personal-access-token-pat",
-    "href": "training/git.html#step-2-generate-a-personal-access-token-pat",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Visit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt",
-    "crumbs": [
-      "Training Materials"
-    ]
-  },
-  {
-    "objectID": "training/git.html#step-3-test-your-https-setup",
-    "href": "training/git.html#step-3-test-your-https-setup",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Run the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.",
-    "crumbs": [
-      "Training Materials"
-    ]
-  },
-  {
-    "objectID": "training/git.html#step-4-set-your-git-identity",
-    "href": "training/git.html#step-4-set-your-git-identity",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Set your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"\nNotice that this email does not have to correspond to what you used on github.com, but it should be an address where you are indeed reachable.",
+    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
     "crumbs": [
       "Training Materials"
     ]
@@ -70,8 +30,8 @@
     "objectID": "training/git.html#final-checklist",
     "href": "training/git.html#final-checklist",
     "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Git installed and working\nGitHub account ready\nCredential helper configured\nPersonal Access Token created and saved\nTest command (git ls-remote) successful\nGit name and email configured\n\nYou’re now ready for the workshop!",
+    "section": "✅ Final Checklist",
+    "text": "✅ Final Checklist\n\nGit installed and working\nVSCode installed\nGitHub account ready\nCredential helper configured\nPersonal Access Token created and saved\nTest command (git ls-remote) successful\nGit name and email configured\n\nYou’re now ready for the workshop!",
     "crumbs": [
       "Training Materials"
     ]
