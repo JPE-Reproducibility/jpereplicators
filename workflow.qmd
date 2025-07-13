@@ -26,17 +26,17 @@ git branch
 ## Package Acquisition
 
 1. Get or update repo:
-   1. If this is the first round, clone the git repo (using url in your email) to your computer. For example to `~/JPE-replications/Author-1234`. That would be
+   1. If this is the first round, clone the git repo (using url in your email - here I use an example package) to your computer. For example to `~/JPE-replications`. That would be
    
         ```bash
-        cd ~/JPE-replications/Author-1234
-        git clone url_in_email
+        cd ~/JPE-replications
+        git clone https://github.com/JPE-Reproducibility/JPE-Oswald-66666666.git
         ```
 
    2. If this is subsequent round `n`, say `n=3`, you just have to get the next round branch:
    
         ```bash
-        cd ~/JPE-replications/Author-1234
+        cd ~/JPE-replications/JPE-Oswald-66666666
         git branch -r  # check which remote branches are available
         git checkout -b round3 origin/round3 # creates local branch round3 from remote branch round3
         ```
@@ -54,7 +54,7 @@ Do **not** copy the replication package anywhere else on your computer (maybe be
 
 ## First Compilation of report 
 
-1. Before doing anything else, open VScode at `~/JPE-replications/Author-1234`.
+1. Before doing anything else, open VScode at `~/JPE-replications/JPE-Oswald-66666666`.
 2. Open file `TEMPLATE.qmd`
 3. Hit `Shift-Cmd-K` or open command palette and type `quarto: preview`
 4. You will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up.
@@ -62,6 +62,17 @@ Do **not** copy the replication package anywhere else on your computer (maybe be
 ## Doing the Replication and Preparing Report
 
 Start working on the job, by going through `TEMPLATE.qmd` and make edits as required.
+
+::: {.callout-tip}
+
+# *It Does Not Work*
+
+What if there are issues with running the package? 
+
+* If there is an obvious bug, this just goes into your report. If reasonably quick to do, try to fix the bug in the code, and run with your fix. Obviously you should commit your changes to the code to the repo with suitable comments. Your report should contain a very precise description of the bug and your solution.
+* If you need help figuring out the details of the problem (if you are *unsure whether this actually a bug or something you might be doing wrong*): Then file an issue on the github repo of your package and ping `@jpedataeditor` in your issue description. Do *not write on slack* about the bug in the first place.
+
+:::
 
 ## Submitting report
 
