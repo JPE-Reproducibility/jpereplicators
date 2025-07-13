@@ -1,99 +1,74 @@
 [
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Blog",
+    "objectID": "workflow.html",
+    "href": "workflow.html",
+    "title": "An Example Workflow",
     "section": "",
-    "text": "No matching items"
+    "text": "You have just received an assigment email about package Author-1234. You have carefully read it. Now what?"
   },
   {
-    "objectID": "training/git-slides.html#git-vs.-dropbox-for-version-control",
-    "href": "training/git-slides.html#git-vs.-dropbox-for-version-control",
-    "title": "Git Version Control",
-    "section": "🆚 Git vs. Dropbox for Version Control",
-    "text": "🆚 Git vs. Dropbox for Version Control\n\n\n\n\n\n\n\n\n\nFeature\nGit\nDropbox\n\n\n\n\nVersion History\nFull commit history with messages\nKeeps older versions, no clear log\n\n\nUnderstanding Changes\nLine-by-line diffs, commit messages\nNo diffs, no context for changes\n\n\nBranching & Merging\nYes — supports parallel development\nNo — one version at a time\n\n\nCollaboration\nDesigned for multiple developers\nRisk of overwrite when editing together\n\n\nOffline Access\nFully local; sync when ready\nNeeds internet to sync versions\n\n\nProject Structure\nTracks full directory state\nSyncs files individually\n\n\nIntended Use\nCode & structured text, reproducibility\nGeneral file storage and backup\n\n\n\n\n\n✅ Git is a professional-grade version control system.\n\n📦 Dropbox is great for basic backups, not for collaborative code development.",
+    "objectID": "workflow.html#package-acquisition",
+    "href": "workflow.html#package-acquisition",
+    "title": "An Example Workflow",
+    "section": "1 Package Acquisition",
+    "text": "1 Package Acquisition\n\nGet or update repo:\n\nIf this is the first round, clone the git repo (using url in your email) to your computer. For example to ~/JPE-replications/Author-1234. That would be\ncd ~/JPE-replications/Author-1234\ngit clone url_in_email\nIf this is subsequent round n, say n=3, you just have to get the next round branch:\ncd ~/JPE-replications/Author-1234\ngit branch -r  # check which remote branches are available\ngit checkout -b round3 origin/round3 # creates local branch round3 from remote branch round3\n\nDownload dropbox folder with full package and paper. That’s the second URL in your email.\nExtract package (if compressed), and copy into the git repo as ~/JPE-replications/Author-1234/replication-package\n\n\n\n\n\n\n\nDanger Zone ⛔️\n\n\n\nDo not copy the replication package anywhere else on your computer (maybe because you are uncomfortable with git). Copying files back and forth manually on your computer is a recipe for assured disaster - don’t go there."
+  },
+  {
+    "objectID": "workflow.html#first-compilation-of-report",
+    "href": "workflow.html#first-compilation-of-report",
+    "title": "An Example Workflow",
+    "section": "2 First Compilation of report",
+    "text": "2 First Compilation of report\n\nBefore doing anything else, open VScode at ~/JPE-replications/Author-1234.\nOpen file TEMPLATE.qmd\nHit Shift-Cmd-K or open command palette and type quarto: preview\nYou will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up."
+  },
+  {
+    "objectID": "workflow.html#doing-the-replication-and-preparing-report",
+    "href": "workflow.html#doing-the-replication-and-preparing-report",
+    "title": "An Example Workflow",
+    "section": "3 Doing the Replication and Preparing Report",
+    "text": "3 Doing the Replication and Preparing Report\nStart working on the job, by going through TEMPLATE.qmd and make edits as required."
+  },
+  {
+    "objectID": "workflow.html#submitting-report",
+    "href": "workflow.html#submitting-report",
+    "title": "An Example Workflow",
+    "section": "4 Submitting report",
+    "text": "4 Submitting report\nThis again differs by whether first or subsequent round.\nFirst round:\ngit add package-output-map.xlsx\ngit add images # for your screenshots\ngit add TEMPLATE.qmd  # your edits\ngit add TEMPLATE.pdf  # the compiled version of your report\ngit add TEMPLATE-APPENDIX.qmd  # if you made any edits\ngit commit -m 'first round report. code breaks. missing citations.'\ngit push origin round1  # pushes back to `round1` branch - this must be the branch you cloned from, don't create a new branch!\nround n:\n\nLet’s say again that n=3.\n\ngit add package-output-map.xlsx\ngit add images # for your screenshots\ngit add TEMPLATE.qmd  # your edits\ngit add TEMPLATE.pdf  # the compiled version of your report\ngit add TEMPLATE-APPENDIX.qmd  # if you made any edits\ngit commit -m 'round 3 report. almost done. still missing citations.'\ngit push origin round3  # pushes back to `round3` branch"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Journal of Political Economy  Replicator Website",
+    "section": "",
+    "text": "This website provides all the relevant infos and training materials for replicators at the Journal of Political Economy.\n\nExample Workflow\ngit training"
+  },
+  {
+    "objectID": "training/git-prereq.html",
+    "href": "training/git-prereq.html",
+    "title": "Git Intro Workshop",
+    "section": "",
+    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here. You need this tool to write reports.\nYou can download the Github GUI for your OS as well: https://desktop.github.com/download/. This is helpful for authentication issues (authenticates seamlessly).\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
     "crumbs": [
-      "Git workshop"
+      "Pre workshop"
     ]
   },
   {
-    "objectID": "training/git-slides.html#tracking-things",
-    "href": "training/git-slides.html#tracking-things",
-    "title": "Git Version Control",
-    "section": "Tracking Things",
-    "text": "Tracking Things\n\nWe only track code (i.e. text files!) with version control.\n(We can track small datasets. Github has a 100MB file size limit)\nIn our JPE org, we will never track data with version control.\nData will be downloaded directly from the dataverse deposit, where authors submit their packages.",
+    "objectID": "training/git-prereq.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
+    "href": "training/git-prereq.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
+    "title": "Git Intro Workshop",
+    "section": "",
+    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here. You need this tool to write reports.\nYou can download the Github GUI for your OS as well: https://desktop.github.com/download/. This is helpful for authentication issues (authenticates seamlessly).\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
     "crumbs": [
-      "Git workshop"
+      "Pre workshop"
     ]
   },
   {
-    "objectID": "training/git-slides.html#preview-of-jpe-workflow",
-    "href": "training/git-slides.html#preview-of-jpe-workflow",
-    "title": "Git Version Control",
-    "section": "Preview of JPE Workflow",
-    "text": "Preview of JPE Workflow\n\nEach paper will get a github repository.\nThe repo contains\n\nall code contained in the package\nthe paper and the appendix pdfs,\ntemplate code with my tools,\nand the reports I prepare for you and which you will edit.\n\nYou will not send me emails with pdfs, but you will push a commit to this repo.\n\n\n\n\n\n\n\n\nif you have been following along 🧐\n\n\nWhat is not contained in the repo?",
+    "objectID": "training/git-prereq.html#final-checklist",
+    "href": "training/git-prereq.html#final-checklist",
+    "title": "Git Intro Workshop",
+    "section": "✅ Final Checklist",
+    "text": "✅ Final Checklist\n\nGit installed and working\nVSCode installed\nGitHub account ready\nCredential helper configured\nPersonal Access Token created and saved\nTest command (git ls-remote) successful\nGit name and email configured\n\nYou’re now ready for the workshop!",
     "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#open-your-vscode",
-    "href": "training/git-slides.html#open-your-vscode",
-    "title": "Git Version Control",
-    "section": "Open your VScode",
-    "text": "Open your VScode\n\nExplain program\ncreate directory under your home directory (or anywhere really)\ncreate a text file\nopen terminal (shift-cmd-P and type terminal)\ncreate text file in terminal:\n\necho \"This is the first version of the file.\" &gt; notes.txt",
-    "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#is-this-git",
-    "href": "training/git-slides.html#is-this-git",
-    "title": "Git Version Control",
-    "section": "is this git?",
-    "text": "is this git?\ngit status\n\n\nerror. not a git repo. not tracking anything.\nAlright, let’s start tracking.\n\ngit init",
-    "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#git-status",
-    "href": "training/git-slides.html#git-status",
-    "title": "Git Version Control",
-    "section": "git status",
-    "text": "git status\n\ngit status informs you about the current status of the repo.\nLet’s record the current state.\nWe need to first select which files to record (with git add), then we actually add them to history with git commit.",
-    "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#lets-add-some-code",
-    "href": "training/git-slides.html#lets-add-some-code",
-    "title": "Git Version Control",
-    "section": "let’s add some code",
-    "text": "let’s add some code\n# add to code.R\nprint(\"hi! drawing a random number\")\ntimestamp()\nrunif(1)",
-    "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#lets-add-a-readme",
-    "href": "training/git-slides.html#lets-add-a-readme",
-    "title": "Git Version Control",
-    "section": "Let’s add a readme",
-    "text": "Let’s add a readme\nlike here",
-    "crumbs": [
-      "Git workshop"
-    ]
-  },
-  {
-    "objectID": "training/git-slides.html#resources",
-    "href": "training/git-slides.html#resources",
-    "title": "Git Version Control",
-    "section": "Resources",
-    "text": "Resources\n\nScPoProgramming\nGetting Started with github Desktop",
-    "crumbs": [
-      "Git workshop"
+      "Pre workshop"
     ]
   },
   {
@@ -207,40 +182,100 @@
     ]
   },
   {
-    "objectID": "training/git-prereq.html",
-    "href": "training/git-prereq.html",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here. You need this tool to write reports.\nYou can download the Github GUI for your OS as well: https://desktop.github.com/download/. This is helpful for authentication issues (authenticates seamlessly).\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
+    "objectID": "training/git-slides.html#git-vs.-dropbox-for-version-control",
+    "href": "training/git-slides.html#git-vs.-dropbox-for-version-control",
+    "title": "Git Version Control",
+    "section": "🆚 Git vs. Dropbox for Version Control",
+    "text": "🆚 Git vs. Dropbox for Version Control\n\n\n\n\n\n\n\n\n\nFeature\nGit\nDropbox\n\n\n\n\nVersion History\nFull commit history with messages\nKeeps older versions, no clear log\n\n\nUnderstanding Changes\nLine-by-line diffs, commit messages\nNo diffs, no context for changes\n\n\nBranching & Merging\nYes — supports parallel development\nNo — one version at a time\n\n\nCollaboration\nDesigned for multiple developers\nRisk of overwrite when editing together\n\n\nOffline Access\nFully local; sync when ready\nNeeds internet to sync versions\n\n\nProject Structure\nTracks full directory state\nSyncs files individually\n\n\nIntended Use\nCode & structured text, reproducibility\nGeneral file storage and backup\n\n\n\n\n\n✅ Git is a professional-grade version control system.\n\n📦 Dropbox is great for basic backups, not for collaborative code development.",
     "crumbs": [
-      "Pre workshop"
+      "Git workshop"
     ]
   },
   {
-    "objectID": "training/git-prereq.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
-    "href": "training/git-prereq.html#pre-workshop-setup-guide-vscode-git-github-https-authentication",
-    "title": "Git Intro Workshop",
-    "section": "",
-    "text": "Welcome to the Git Workshop! Follow these steps before the session to make sure you’re ready to use Git and GitHub with HTTPS authentication.\n\n\n\nMake sure you have:\n\nGit installed (check with git --version)\nA GitHub account (https://github.com)\nA working terminal (e.g. Git Bash on Windows, Terminal on macOS/Linux)\nVScode installed, otherwise click here. You need this tool to write reports.\nYou can download the Github GUI for your OS as well: https://desktop.github.com/download/. This is helpful for authentication issues (authenticates seamlessly).\n\n\n\n\n\nTo avoid entering your credentials every time, configure Git to store them securely.\n\n\ngit config --global credential.helper manager-core\n\n\n\ngit config --global credential.helper osxkeychain\n\n\n\ngit config --global credential.helper cache\n\n💡 You only need to run this once per system.\n\n\n\n\n\n\n\nVisit: https://github.com/settings/tokens\nClick “Generate new token (classic)”\nFill in the form:\n\nNote: Git Workshop Token\nExpiration: 90 days\nScopes:\n\n✅ repo – full access to GitHub repositories\n✅ workflow – allows triggering and viewing GitHub Actions\n\n\nClick Generate token\nCopy the token now — you won’t be able to see it again.\n➤ Save it in a safe place on your computer, like a plain text file:\nmy-github-token.txt\n\n\n\n\n\nRun the following command to verify that Git can connect to GitHub using HTTPS:\ngit ls-remote https://github.com/github/gitignore.git\nYou will be prompted for your GitHub username and your Personal Access Token as the password.\n\n✅ If it returns a list of references (e.g. refs/heads/main), you’re ready.\n❌ If authentication fails, double-check that your token has the correct scopes and hasn’t expired.\n\n\n\n\n\nSet your name and email so commits are properly attributed.\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@example.com\"",
+    "objectID": "training/git-slides.html#tracking-things",
+    "href": "training/git-slides.html#tracking-things",
+    "title": "Git Version Control",
+    "section": "Tracking Things",
+    "text": "Tracking Things\n\nWe only track code (i.e. text files!) with version control.\n(We can track small datasets. Github has a 100MB file size limit)\nIn our JPE org, we will never track data with version control.\nData will be downloaded directly from the dataverse deposit, where authors submit their packages.",
     "crumbs": [
-      "Pre workshop"
+      "Git workshop"
     ]
   },
   {
-    "objectID": "training/git-prereq.html#final-checklist",
-    "href": "training/git-prereq.html#final-checklist",
-    "title": "Git Intro Workshop",
-    "section": "✅ Final Checklist",
-    "text": "✅ Final Checklist\n\nGit installed and working\nVSCode installed\nGitHub account ready\nCredential helper configured\nPersonal Access Token created and saved\nTest command (git ls-remote) successful\nGit name and email configured\n\nYou’re now ready for the workshop!",
+    "objectID": "training/git-slides.html#preview-of-jpe-workflow",
+    "href": "training/git-slides.html#preview-of-jpe-workflow",
+    "title": "Git Version Control",
+    "section": "Preview of JPE Workflow",
+    "text": "Preview of JPE Workflow\n\nEach paper will get a github repository.\nThe repo contains\n\nall code contained in the package\nthe paper and the appendix pdfs,\ntemplate code with my tools,\nand the reports I prepare for you and which you will edit.\n\nYou will not send me emails with pdfs, but you will push a commit to this repo.\n\n\n\n\n\n\n\n\nif you have been following along 🧐\n\n\nWhat is not contained in the repo?",
     "crumbs": [
-      "Pre workshop"
+      "Git workshop"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Journal of Political Economy  Replicator Website",
+    "objectID": "training/git-slides.html#open-your-vscode",
+    "href": "training/git-slides.html#open-your-vscode",
+    "title": "Git Version Control",
+    "section": "Open your VScode",
+    "text": "Open your VScode\n\nExplain program\ncreate directory under your home directory (or anywhere really)\ncreate a text file\nopen terminal (shift-cmd-P and type terminal)\ncreate text file in terminal:\n\necho \"This is the first version of the file.\" &gt; notes.txt",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "training/git-slides.html#is-this-git",
+    "href": "training/git-slides.html#is-this-git",
+    "title": "Git Version Control",
+    "section": "is this git?",
+    "text": "is this git?\ngit status\n\n\nerror. not a git repo. not tracking anything.\nAlright, let’s start tracking.\n\ngit init",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "training/git-slides.html#git-status",
+    "href": "training/git-slides.html#git-status",
+    "title": "Git Version Control",
+    "section": "git status",
+    "text": "git status\n\ngit status informs you about the current status of the repo.\nLet’s record the current state.\nWe need to first select which files to record (with git add), then we actually add them to history with git commit.",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "training/git-slides.html#lets-add-some-code",
+    "href": "training/git-slides.html#lets-add-some-code",
+    "title": "Git Version Control",
+    "section": "let’s add some code",
+    "text": "let’s add some code\n# add to code.R\nprint(\"hi! drawing a random number\")\ntimestamp()\nrunif(1)",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "training/git-slides.html#lets-add-a-readme",
+    "href": "training/git-slides.html#lets-add-a-readme",
+    "title": "Git Version Control",
+    "section": "Let’s add a readme",
+    "text": "Let’s add a readme\nlike here",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "training/git-slides.html#resources",
+    "href": "training/git-slides.html#resources",
+    "title": "Git Version Control",
+    "section": "Resources",
+    "text": "Resources\n\nScPoProgramming\nGetting Started with github Desktop",
+    "crumbs": [
+      "Git workshop"
+    ]
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
     "section": "",
-    "text": "This website provides all the relevant infos and training materials for replicators at the Journal of Political Economy.\nThe site is work in progress as you can see, so check back soon."
+    "text": "No matching items"
   }
 ]

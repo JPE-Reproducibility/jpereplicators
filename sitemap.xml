@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/posts.html</loc>
+    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/workflow.html</loc>
+    <lastmod>2025-07-13T09:12:09.286Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/index.html</loc>
+    <lastmod>2025-07-13T09:06:04.457Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/training/git-prereq.html</loc>
+    <lastmod>2025-05-19T14:53:58.344Z</lastmod>
+  </url>
+  <url>
+    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/replicator-resources.html</loc>
     <lastmod>2025-05-19T10:09:00.188Z</lastmod>
   </url>
   <url>
@@ -9,15 +21,7 @@
     <lastmod>2025-05-19T14:53:02.613Z</lastmod>
   </url>
   <url>
-    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/replicator-resources.html</loc>
+    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/posts.html</loc>
     <lastmod>2025-05-19T10:09:00.188Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/training/git-prereq.html</loc>
-    <lastmod>2025-05-19T14:53:58.344Z</lastmod>
-  </url>
-  <url>
-    <loc>git@github-jpe:JPE-Reproducibility/jpereplicators.git/index.html</loc>
-    <lastmod>2025-05-19T14:54:55.383Z</lastmod>
   </url>
 </urlset>
