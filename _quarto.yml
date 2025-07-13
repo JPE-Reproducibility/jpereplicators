@@ -11,14 +11,6 @@ website:
       - icon: github
         href: https://github.com/JPE-Reproducibility/jpereplicators
 
-  # temporary
-  announcement: 
-    icon: cone-striped
-    dismissable: false
-    content: "This website is being built at the moment. Official Launch July 1st 2025."
-    type: warning
-    position: above-navbar
-
   sidebar:
     style: docked
     logo: img/jpe.jpg

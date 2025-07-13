@@ -7,5 +7,6 @@ title: "Journal of Political Economy <br> Replicator Website"
 This website provides all the relevant infos and training materials for replicators at the [{{< var jpe.long >}}]({{< var jpe.url >}}). 
 
 
-The site is work in progress as you can see, so check back soon.
+1. [Example Workflow](workflow.qmd)
+2. [git training](training/git-slides.qmd)
 

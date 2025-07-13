@@ -1,0 +1,95 @@
+---
+title: "An Example Workflow"
+toc: true
+number-sections: true
+---
+
+
+
+You have just received an assigment email about package `Author-1234`. You have carefully read it. Now what?
+
+::: {.callout-note}
+
+# First Round or Subsequent Round?
+
+There is a distinction between first round and subsequent round packages. On your `git` repo, each round is a different *branch*. That is, when you clone this for the first time, you see that you have branch `round1`. How to see this? 👇
+
+```bash
+git branch 
+```
+
+👉 Watch out in the `git` operations below.
+
+:::
+
+
+## Package Acquisition
+
+1. Get or update repo:
+   1. If this is the first round, clone the git repo (using url in your email) to your computer. For example to `~/JPE-replications/Author-1234`. That would be
+   
+        ```bash
+        cd ~/JPE-replications/Author-1234
+        git clone url_in_email
+        ```
+
+   2. If this is subsequent round `n`, say `n=3`, you just have to get the next round branch:
+   
+        ```bash
+        cd ~/JPE-replications/Author-1234
+        git branch -r  # check which remote branches are available
+        git checkout -b round3 origin/round3 # creates local branch round3 from remote branch round3
+        ```
+
+2. Download dropbox folder with full package and paper. That's the second URL in your email.
+3. Extract package (if compressed), and copy **into** the git repo as `~/JPE-replications/Author-1234/replication-package`
+
+::: {.callout-warning}
+
+# Danger Zone ⛔️
+
+Do **not** copy the replication package anywhere else on your computer (maybe because you are uncomfortable with `git`). Copying files back and forth manually on your computer is a recipe for assured disaster - don't go there.
+
+:::
+
+## First Compilation of report 
+
+1. Before doing anything else, open VScode at `~/JPE-replications/Author-1234`.
+2. Open file `TEMPLATE.qmd`
+3. Hit `Shift-Cmd-K` or open command palette and type `quarto: preview`
+4. You will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up.
+
+## Doing the Replication and Preparing Report
+
+Start working on the job, by going through `TEMPLATE.qmd` and make edits as required.
+
+## Submitting report
+
+This again differs by whether first or subsequent round.
+
+**First round:**
+
+
+```bash
+git add package-output-map.xlsx
+git add images # for your screenshots
+git add TEMPLATE.qmd  # your edits
+git add TEMPLATE.pdf  # the compiled version of your report
+git add TEMPLATE-APPENDIX.qmd  # if you made any edits
+git commit -m 'first round report. code breaks. missing citations.'
+git push origin round1  # pushes back to `round1` branch - this must be the branch you cloned from, don't create a new branch!
+```
+
+**round `n`:**
+
+> Let's say again that `n=3`.
+
+```bash
+git add package-output-map.xlsx
+git add images # for your screenshots
+git add TEMPLATE.qmd  # your edits
+git add TEMPLATE.pdf  # the compiled version of your report
+git add TEMPLATE-APPENDIX.qmd  # if you made any edits
+git commit -m 'round 3 report. almost done. still missing citations.'
+git push origin round3  # pushes back to `round3` branch
+```
