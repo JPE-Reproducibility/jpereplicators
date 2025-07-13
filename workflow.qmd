@@ -6,7 +6,7 @@ number-sections: true
 
 
 
-You have just received an assigment email about package `Author-1234`. You have carefully read it. Now what?
+You have just received an assigment email about package `JPE-Oswald-66666666`. You have carefully read it. Now what?
 
 ::: {.callout-note}
 
