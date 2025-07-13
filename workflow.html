@@ -217,11 +217,11 @@ First Round or Subsequent Round?
 <ol type="1">
 <li>Get or update repo:
 <ol type="1">
-<li><p>If this is the first round, clone the git repo (using url in your email) to your computer. For example to <code>~/JPE-replications/Author-1234</code>. That would be</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/JPE-replications/Author-1234</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone url_in_email</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>If this is the first round, clone the git repo (using url in your email - here I use an example package) to your computer. For example to <code>~/JPE-replications</code>. That would be</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/JPE-replications</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/JPE-Reproducibility/JPE-Oswald-66666666.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>If this is subsequent round <code>n</code>, say <code>n=3</code>, you just have to get the next round branch:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/JPE-replications/Author-1234</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/JPE-replications/JPE-Oswald-66666666</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-r</span>  <span class="co"># check which remote branches are available</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> round3 origin/round3 <span class="co"># creates local branch round3 from remote branch round3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol></li>
@@ -245,7 +245,7 @@ Danger Zone ⛔️
 <section id="first-compilation-of-report" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="first-compilation-of-report"><span class="header-section-number">2</span> First Compilation of report</h2>
 <ol type="1">
-<li>Before doing anything else, open VScode at <code>~/JPE-replications/Author-1234</code>.</li>
+<li>Before doing anything else, open VScode at <code>~/JPE-replications/JPE-Oswald-66666666</code>.</li>
 <li>Open file <code>TEMPLATE.qmd</code></li>
 <li>Hit <code>Shift-Cmd-K</code> or open command palette and type <code>quarto: preview</code></li>
 <li>You will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up.</li>

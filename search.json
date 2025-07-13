@@ -11,14 +11,14 @@
     "href": "workflow.html#package-acquisition",
     "title": "An Example Workflow",
     "section": "1 Package Acquisition",
-    "text": "1 Package Acquisition\n\nGet or update repo:\n\nIf this is the first round, clone the git repo (using url in your email) to your computer. For example to ~/JPE-replications/Author-1234. That would be\ncd ~/JPE-replications/Author-1234\ngit clone url_in_email\nIf this is subsequent round n, say n=3, you just have to get the next round branch:\ncd ~/JPE-replications/Author-1234\ngit branch -r  # check which remote branches are available\ngit checkout -b round3 origin/round3 # creates local branch round3 from remote branch round3\n\nDownload dropbox folder with full package and paper. That’s the second URL in your email.\nExtract package (if compressed), and copy into the git repo as ~/JPE-replications/Author-1234/replication-package\n\n\n\n\n\n\n\nDanger Zone ⛔️\n\n\n\nDo not copy the replication package anywhere else on your computer (maybe because you are uncomfortable with git). Copying files back and forth manually on your computer is a recipe for assured disaster - don’t go there."
+    "text": "1 Package Acquisition\n\nGet or update repo:\n\nIf this is the first round, clone the git repo (using url in your email - here I use an example package) to your computer. For example to ~/JPE-replications. That would be\ncd ~/JPE-replications\ngit clone https://github.com/JPE-Reproducibility/JPE-Oswald-66666666.git\nIf this is subsequent round n, say n=3, you just have to get the next round branch:\ncd ~/JPE-replications/JPE-Oswald-66666666\ngit branch -r  # check which remote branches are available\ngit checkout -b round3 origin/round3 # creates local branch round3 from remote branch round3\n\nDownload dropbox folder with full package and paper. That’s the second URL in your email.\nExtract package (if compressed), and copy into the git repo as ~/JPE-replications/Author-1234/replication-package\n\n\n\n\n\n\n\nDanger Zone ⛔️\n\n\n\nDo not copy the replication package anywhere else on your computer (maybe because you are uncomfortable with git). Copying files back and forth manually on your computer is a recipe for assured disaster - don’t go there."
   },
   {
     "objectID": "workflow.html#first-compilation-of-report",
     "href": "workflow.html#first-compilation-of-report",
     "title": "An Example Workflow",
     "section": "2 First Compilation of report",
-    "text": "2 First Compilation of report\n\nBefore doing anything else, open VScode at ~/JPE-replications/Author-1234.\nOpen file TEMPLATE.qmd\nHit Shift-Cmd-K or open command palette and type quarto: preview\nYou will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up."
+    "text": "2 First Compilation of report\n\nBefore doing anything else, open VScode at ~/JPE-replications/JPE-Oswald-66666666.\nOpen file TEMPLATE.qmd\nHit Shift-Cmd-K or open command palette and type quarto: preview\nYou will see the template I prepared for this round of the package. Make sure it looks ok and all my prepared content shows up."
   },
   {
     "objectID": "workflow.html#doing-the-replication-and-preparing-report",
