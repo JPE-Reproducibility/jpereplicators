@@ -25,7 +25,7 @@
     "href": "workflow.html#doing-the-replication-and-preparing-report",
     "title": "An Example Workflow",
     "section": "3 Doing the Replication and Preparing Report",
-    "text": "3 Doing the Replication and Preparing Report\nStart working on the job, by going through TEMPLATE.qmd and make edits as required."
+    "text": "3 Doing the Replication and Preparing Report\nStart working on the job, by going through TEMPLATE.qmd and make edits as required.\n\n\n\n\n\n\nIt Does Not Work\n\n\n\nWhat if there are issues with running the package?\n\nIf there is an obvious bug, this just goes into your report. If reasonably quick to do, try to fix the bug in the code, and run with your fix. Obviously you should commit your changes to the code to the repo with suitable comments. Your report should contain a very precise description of the bug and your solution.\nIf you need help figuring out the details of the problem (if you are unsure whether this actually a bug or something you might be doing wrong): Then file an issue on the github repo of your package and ping @jpedataeditor in your issue description. Do not write on slack about the bug in the first place."
   },
   {
     "objectID": "workflow.html#submitting-report",
