@@ -1,0 +1,58 @@
+---
+title: "Working on Nuvolos"
+toc: true
+number-sections: true
+---
+
+
+
+In large parts the instructions are similar to what is written in [workflow](workflow.qmd). The main difference arises with how to get package and github repo on to the nuvolos instance. We will address those issues now.
+
+
+## Creating an Instance/Space
+
+::: {.callout-note}
+
+# Nomenclature
+
+On nuvolos you will find *Spaces* as the relevant denomination of a workspace. A *Space* contains data, code and applications. I often refer to those things as **instances**, because I view them like separate virtual machines (i.e. computers) - this is probably not entirely correct, but I can't avoid it.
+
+:::
+
+1. Log on to [nuvolos.cloud](https://nuvolos.com/).
+2. Scroll down all the way and click on "create new research project"
+3. Fill in the JPE case id for Research Project name. E.g. `JPE-Oswald-66666666`, same for short description
+4. Activate "Create space based on template"
+5. Clone an existing space > Choose `jpetemplate` > clone space
+6. skip all the rest (don't add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you.
+
+
+
+
+## Package and Git Repo Acquisition
+
+1. Your nuvolos Space is now setup. You can start the VScode application from the left menu bar by clicking on the "screen" icon (Applications).
+2. You see VScode in your browser, running on that machine. Open a terminal with the shortcut shift+control+` or do shift+control+p to get the command palette and start typing "terminal"
+3. In the terminal, type `setup.sh` and hit enter
+4. The script asks you to paste the dropbox URL, do it 
+5. Same for the github URL 
+6. You are good to go now. type `cd repo` to go inside your git repository on this machine and have a look around
+7. You may have to add additional apps now. 
+
+
+## Compilation of report 
+
+The only difference with respect to compiling your report in [workflow](workflow.qmd) is that you cannot directly insert screenshots, because those are saved on your local computer by default. So, take the screenshots as usual, save locally, and manually upload them into nuvolos using the file browser in the left menu bar. Place the screenshots in `/files/repo/images` and refer to them from your `TEMPLATE.qmd` report.
+
+I strongly recommend to do this inside VScode. To compile the report, just do cmd+control+k which is by default mapped to the `Quarto: Preview` command.
+
+## Submission of report
+
+Identical to [workflow](workflow.qmd), please consult there.
+
+
+## Video Run Through
+
+here is a video. 
+
+{{< video https://youtu.be/N3peiNV5EpU >}}
