@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Journal of Political Economy   Replicator Website – {{&lt; var jpe.short &gt;}} Replicator Website</title>
+<title>Working on Nuvolos – JPE Replicator Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Journal of Political Economy <br> Replicator Website</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Working on Nuvolos</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,13 +128,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#creating-an-instancespace" id="toc-creating-an-instancespace" class="nav-link active" data-scroll-target="#creating-an-instancespace"><span class="header-section-number">1</span> Creating an Instance/Space</a></li>
+  <li><a href="#package-and-git-repo-acquisition" id="toc-package-and-git-repo-acquisition" class="nav-link" data-scroll-target="#package-and-git-repo-acquisition"><span class="header-section-number">2</span> Package and Git Repo Acquisition</a></li>
+  <li><a href="#compilation-of-report" id="toc-compilation-of-report" class="nav-link" data-scroll-target="#compilation-of-report"><span class="header-section-number">3</span> Compilation of report</a></li>
+  <li><a href="#submission-of-report" id="toc-submission-of-report" class="nav-link" data-scroll-target="#submission-of-report"><span class="header-section-number">4</span> Submission of report</a></li>
+  <li><a href="#video-run-through" id="toc-video-run-through" class="nav-link" data-scroll-target="#video-run-through"><span class="header-section-number">5</span> Video Run Through</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Journal of Political Economy <br> Replicator Website</h1>
+<h1 class="title">Working on Nuvolos</h1>
 </div>
 
 
@@ -151,14 +163,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website provides all the relevant infos and training materials for replicators at the <a href="https://www.journals.uchicago.edu/toc/jpe/current">Journal of Political Economy</a>.</p>
+<p>In large parts the instructions are similar to what is written in <a href="./workflow.html">workflow</a>. The main difference arises with how to get package and github repo on to the nuvolos instance. We will address those issues now.</p>
+<section id="creating-an-instancespace" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="creating-an-instancespace"><span class="header-section-number">1</span> Creating an Instance/Space</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nomenclature
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On nuvolos you will find <em>Spaces</em> as the relevant denomination of a workspace. A <em>Space</em> contains data, code and applications. I often refer to those things as <strong>instances</strong>, because I view them like separate virtual machines (i.e.&nbsp;computers) - this is probably not entirely correct, but I can’t avoid it.</p>
+</div>
+</div>
 <ol type="1">
-<li><a href="./workflow.html">Example Workflow</a></li>
-<li><a href="./nuvolos.html">Workflow on Nuvolos</a></li>
-<li><a href="./training/git-slides.html">git training</a></li>
+<li>Log on to <a href="https://nuvolos.com/">nuvolos.cloud</a>.</li>
+<li>Scroll down all the way and click on “create new research project”</li>
+<li>Fill in the JPE case id for Research Project name. E.g. <code>JPE-Oswald-66666666</code>, same for short description</li>
+<li>Activate “Create space based on template”</li>
+<li>Clone an existing space &gt; Choose <code>jpetemplate</code> &gt; clone space</li>
+<li>skip all the rest (don’t add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you.</li>
 </ol>
+</section>
+<section id="package-and-git-repo-acquisition" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="package-and-git-repo-acquisition"><span class="header-section-number">2</span> Package and Git Repo Acquisition</h2>
+<ol type="1">
+<li>Your nuvolos Space is now setup. You can start the VScode application from the left menu bar by clicking on the “screen” icon (Applications).</li>
+<li>You see VScode in your browser, running on that machine. Open a terminal with the shortcut shift+control+` or do shift+control+p to get the command palette and start typing “terminal”</li>
+<li>In the terminal, type <code>setup.sh</code> and hit enter</li>
+<li>The script asks you to paste the dropbox URL, do it</li>
+<li>Same for the github URL</li>
+<li>You are good to go now. type <code>cd repo</code> to go inside your git repository on this machine and have a look around</li>
+<li>You may have to add additional apps now.</li>
+</ol>
+</section>
+<section id="compilation-of-report" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="compilation-of-report"><span class="header-section-number">3</span> Compilation of report</h2>
+<p>The only difference with respect to compiling your report in <a href="./workflow.html">workflow</a> is that you cannot directly insert screenshots, because those are saved on your local computer by default. So, take the screenshots as usual, save locally, and manually upload them into nuvolos using the file browser in the left menu bar. Place the screenshots in <code>/files/repo/images</code> and refer to them from your <code>TEMPLATE.qmd</code> report.</p>
+<p>I strongly recommend to do this inside VScode. To compile the report, just do cmd+control+k which is by default mapped to the <code>Quarto: Preview</code> command.</p>
+</section>
+<section id="submission-of-report" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="submission-of-report"><span class="header-section-number">4</span> Submission of report</h2>
+<p>Identical to <a href="./workflow.html">workflow</a>, please consult there.</p>
+</section>
+<section id="video-run-through" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="video-run-through"><span class="header-section-number">5</span> Video Run Through</h2>
+<p>here is a video.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/N3peiNV5EpU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
