@@ -22,4 +22,6 @@ website:
         text: Git workshop        
       - href: replicator-resources.qmd
         text: Resources
+      - href: emails/verify-data.qmd
+        text: "Email template: anonymous"
       

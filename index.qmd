@@ -10,4 +10,5 @@ This website provides all the relevant infos and training materials for replicat
 1. [Example Workflow](workflow.qmd)
 2. [Workflow on Nuvolos](nuvolos.qmd)
 3. [git training](training/git-slides.qmd)
+4. [Replicator Resources](replicator-resources.qmd)
 
