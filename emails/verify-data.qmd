@@ -12,7 +12,7 @@ This email template is sent to authors who cannot by default identify their data
 > 
 > I have asked authors in similar situations to reveal the name of the data provider under a non-disclosure agreement (NDA) with me, so that I can conduct some plausibility checks. Note that the fact that an NDA with me exists will be made public by the JPE. The NDA means that I cannot reveal the disclosed information to others, nor would the JPE publish any names. I [attach an NDA](verify-data-agreement.qmd) that I would sign with you in my personal capacity.
 > 
-> Could you please let me know whether (a) you are OK with revealing the name of the data providers under an NDA with me; (b) if you are uncertain, whether the organization would be OK with the above arrangement; (c) if you are OK with me contacting the source directly.
+> Could you please let me know whether (a) you are OK with revealing the name of the data providers exlusively to me under an NDA you sign with me; (b) if you are uncertain, whether the organization would be OK with the above arrangement; (c) if you are OK with me contacting the source directly.
 > 
 > [IF NECESSARY] Your DCAF indicates that you cannot share the data with us, even when not published. Could you confirm whether the data provider would be open to signing a confidentiality agreement directly with the JPE, to allow temporary access to the data for verification purposes?
 > 
