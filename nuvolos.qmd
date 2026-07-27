@@ -19,12 +19,13 @@ On nuvolos you will find *Spaces* as the relevant denomination of a workspace. A
 
 :::
 
-1. Log on to [nuvolos.cloud](https://nuvolos.com/).
-2. Scroll down all the way and click on "create new research project"
-3. Fill in the JPE case id for Research Project name. E.g. `JPE-Oswald-66666666`, same for short description
-4. Activate "Create space based on template"
-5. Clone an existing space > Choose `jpetemplate` > clone space
-6. skip all the rest (don't add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you.
+1. Log on to [nuvolos.com](https://nuvolos.com/).
+2. In the left menu bar you see "Spaces". click on the `+` symbol and select _Project_.
+3. Set visibility to "Public". 
+4. Fill in the JPE case id for Research Project name. E.g. `JPE-Oswald-66666666`, same for short description
+5. Activate "Create space based on template"
+6. Clone an existing space > Choose `jpetemplate` > clone space
+7. skip all the rest (don't add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you.
 
 
 
