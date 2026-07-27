@@ -186,42 +186,60 @@
     "href": "nuvolos.html",
     "title": "Working on Nuvolos",
     "section": "",
-    "text": "In large parts the instructions are similar to what is written in workflow. The main difference arises with how to get package and github repo on to the nuvolos instance. We will address those issues now."
+    "text": "In large parts the instructions are similar to what is written in workflow. The main difference arises with how to get package and github repo on to the nuvolos instance. We will address those issues now.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "nuvolos.html#creating-an-instancespace",
     "href": "nuvolos.html#creating-an-instancespace",
     "title": "Working on Nuvolos",
     "section": "1 Creating an Instance/Space",
-    "text": "1 Creating an Instance/Space\n\n\n\n\n\n\nNoteNomenclature\n\n\n\nOn nuvolos you will find Spaces as the relevant denomination of a workspace. A Space contains data, code and applications. I often refer to those things as instances, because I view them like separate virtual machines (i.e. computers) - this is probably not entirely correct, but I can’t avoid it.\n\n\n\nLog on to nuvolos.cloud.\nScroll down all the way and click on “create new research project”\nFill in the JPE case id for Research Project name. E.g. JPE-Oswald-66666666, same for short description\nActivate “Create space based on template”\nClone an existing space &gt; Choose jpetemplate &gt; clone space\nskip all the rest (don’t add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you."
+    "text": "1 Creating an Instance/Space\n\n\n\n\n\n\nNoteNomenclature\n\n\n\nOn nuvolos you will find Spaces as the relevant denomination of a workspace. A Space contains data, code and applications. I often refer to those things as instances, because I view them like separate virtual machines (i.e. computers) - this is probably not entirely correct, but I can’t avoid it.\n\n\n\nLog on to nuvolos.com.\nIn the left menu bar you see “Spaces”. click on the + symbol and select Project.\nSet visibility to “Public”.\nFill in the JPE case id for Research Project name. E.g. JPE-Oswald-66666666, same for short description\nActivate “Create space based on template”\nClone an existing space &gt; Choose jpetemplate &gt; clone space\nskip all the rest (don’t add any apps or anything at this point), confirm and wait for about 10 minutes while the machine is provisioned for you.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "nuvolos.html#package-and-git-repo-acquisition",
     "href": "nuvolos.html#package-and-git-repo-acquisition",
     "title": "Working on Nuvolos",
     "section": "2 Package and Git Repo Acquisition",
-    "text": "2 Package and Git Repo Acquisition\n\nYour nuvolos Space is now setup. You can start the VScode application from the left menu bar by clicking on the “screen” icon (Applications).\nYou see VScode in your browser, running on that machine. Open a terminal with the shortcut shift+control+` or do shift+control+p to get the command palette and start typing “terminal”\nIn the terminal, type setup.sh and hit enter\nThe script asks you to paste the dropbox URL, do it\nSame for the github URL\nYou are good to go now. type cd repo to go inside your git repository on this machine and have a look around\nYou may have to add additional apps now."
+    "text": "2 Package and Git Repo Acquisition\n\nYour nuvolos Space is now setup. You can start the VScode application from the left menu bar by clicking on the “screen” icon (Applications).\nYou see VScode in your browser, running on that machine. Open a terminal with the shortcut shift+control+` or do shift+control+p to get the command palette and start typing “terminal”\nIn the terminal, type setup.sh and hit enter\nThe script asks you to paste the dropbox URL, do it\nSame for the github URL\nYou are good to go now. type cd repo to go inside your git repository on this machine and have a look around\nYou may have to add additional apps now.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "nuvolos.html#compilation-of-report",
     "href": "nuvolos.html#compilation-of-report",
     "title": "Working on Nuvolos",
     "section": "3 Compilation of report",
-    "text": "3 Compilation of report\nThe only difference with respect to compiling your report in workflow is that you cannot directly insert screenshots, because those are saved on your local computer by default. So, take the screenshots as usual, save locally, and manually upload them into nuvolos using the file browser in the left menu bar. Place the screenshots in /files/repo/images and refer to them from your TEMPLATE.qmd report.\nI strongly recommend to do this inside VScode. To compile the report, just do cmd+control+k which is by default mapped to the Quarto: Preview command."
+    "text": "3 Compilation of report\nThe only difference with respect to compiling your report in workflow is that you cannot directly insert screenshots, because those are saved on your local computer by default. So, take the screenshots as usual, save locally, and manually upload them into nuvolos using the file browser in the left menu bar. Place the screenshots in /files/repo/images and refer to them from your TEMPLATE.qmd report.\nI strongly recommend to do this inside VScode. To compile the report, just do cmd+control+k which is by default mapped to the Quarto: Preview command.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "nuvolos.html#submission-of-report",
     "href": "nuvolos.html#submission-of-report",
     "title": "Working on Nuvolos",
     "section": "4 Submission of report",
-    "text": "4 Submission of report\nIdentical to workflow, please consult there."
+    "text": "4 Submission of report\nIdentical to workflow, please consult there.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "nuvolos.html#video-run-through",
     "href": "nuvolos.html#video-run-through",
     "title": "Working on Nuvolos",
     "section": "5 Video Run Through",
-    "text": "5 Video Run Through\nhere is a video."
+    "text": "5 Video Run Through\nhere is a video.",
+    "crumbs": [
+      "Nuvolos Setup"
+    ]
   },
   {
     "objectID": "training/git-slides.html#git-vs.-dropbox-for-version-control",
