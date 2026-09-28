@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -145,8 +145,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Local Workflow</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./nuvolos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nuvolos Setup</span></a>
+ <span class="menu-text">Nuvolos Workflow</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,7 +184,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#rules-of-behaviour" id="toc-rules-of-behaviour" class="nav-link active" data-scroll-target="#rules-of-behaviour"><span class="header-section-number">1</span> Rules of Behaviour</a></li>
+  <li><a href="#important-things-to-look-our-for" id="toc-important-things-to-look-our-for" class="nav-link" data-scroll-target="#important-things-to-look-our-for"><span class="header-section-number">2</span> Important Things to Look Our For 🧐</a>
+  <ul class="collapse">
+  <li><a href="#hard-coded-numbers" id="toc-hard-coded-numbers" class="nav-link" data-scroll-target="#hard-coded-numbers"><span class="header-section-number">2.1</span> Hard Coded Numbers</a>
+  <ul class="collapse">
+  <li><a href="#how-to-find-hard-coded-numbers" id="toc-how-to-find-hard-coded-numbers" class="nav-link" data-scroll-target="#how-to-find-hard-coded-numbers"><span class="header-section-number">2.1.1</span> How to find hard coded numbers?</a></li>
+  </ul></li>
+  <li><a href="#missing-software-libraries-in-readme" id="toc-missing-software-libraries-in-readme" class="nav-link" data-scroll-target="#missing-software-libraries-in-readme"><span class="header-section-number">2.2</span> Missing Software Libraries in <code>README</code></a></li>
+  </ul></li>
+  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments"><span class="header-section-number">3</span> Environments</a>
+  <ul class="collapse">
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">3.1</span> <code>python</code></a>
+  <ul class="collapse">
+  <li><a href="#creating-a-conda-env-on-the-command-line" id="toc-creating-a-conda-env-on-the-command-line" class="nav-link" data-scroll-target="#creating-a-conda-env-on-the-command-line"><span class="header-section-number">3.1.1</span> Creating a <code>conda env</code> on the command line</a></li>
+  <li><a href="#creating-a-conda-env-from-a-supplie-.yml-file" id="toc-creating-a-conda-env-from-a-supplie-.yml-file" class="nav-link" data-scroll-target="#creating-a-conda-env-from-a-supplie-.yml-file"><span class="header-section-number">3.1.2</span> Creating a <code>conda env</code> from a supplie <code>.yml</code> file</a></li>
+  </ul></li>
+  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata"><span class="header-section-number">3.2</span> <code>stata</code></a></li>
+  <li><a href="#julia" id="toc-julia" class="nav-link" data-scroll-target="#julia"><span class="header-section-number">3.3</span> <code>julia</code></a></li>
+  </ul></li>
+  <li><a href="#data-citations-for-exeriments" id="toc-data-citations-for-exeriments" class="nav-link" data-scroll-target="#data-citations-for-exeriments"><span class="header-section-number">4</span> Data Citations for exeriments</a></li>
+  <li><a href="#working-on-nuvolos" id="toc-working-on-nuvolos" class="nav-link" data-scroll-target="#working-on-nuvolos"><span class="header-section-number">5</span> Working on Nuvolos</a>
+  <ul class="collapse">
+  <li><a href="#memory-consumption" id="toc-memory-consumption" class="nav-link" data-scroll-target="#memory-consumption"><span class="header-section-number">5.1</span> Memory Consumption</a></li>
+  <li><a href="#large-files-on-nuvolos" id="toc-large-files-on-nuvolos" class="nav-link" data-scroll-target="#large-files-on-nuvolos"><span class="header-section-number">5.2</span> large files on nuvolos</a></li>
+  </ul></li>
+  <li><a href="#r-gotchas" id="toc-r-gotchas" class="nav-link" data-scroll-target="#r-gotchas"><span class="header-section-number">6</span> <code>R</code> gotchas</a>
+  <ul class="collapse">
+  <li><a href="#the-grf-random-forests-package" id="toc-the-grf-random-forests-package" class="nav-link" data-scroll-target="#the-grf-random-forests-package"><span class="header-section-number">6.1</span> The <code>grf</code> Random Forests Package</a></li>
+  <li><a href="#sharing-full-r-libraries-does-not-work-in-general" id="toc-sharing-full-r-libraries-does-not-work-in-general" class="nav-link" data-scroll-target="#sharing-full-r-libraries-does-not-work-in-general"><span class="header-section-number">6.2</span> Sharing Full <code>R</code> Libraries does not work in general</a></li>
+  <li><a href="#dealing-with-large-files" id="toc-dealing-with-large-files" class="nav-link" data-scroll-target="#dealing-with-large-files"><span class="header-section-number">6.3</span> Dealing with Large Files</a>
+  <ul class="collapse">
+  <li><a href="#compression-of-files" id="toc-compression-of-files" class="nav-link" data-scroll-target="#compression-of-files"><span class="header-section-number">6.3.1</span> Compression of files</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -202,8 +249,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>This page contains tips and tricks for replicators.</p>
-<section id="rules-of-behaviour" class="level1">
-<h1>Rules of Behaviour</h1>
+<section id="rules-of-behaviour" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Rules of Behaviour</h1>
 <ol type="1">
 <li>Never contact an author without explicit instruction of the data editor. This serves mainly to protect your own privacy.</li>
 <li>If you find some inconsistencies between package output and paper content, don’t stop at saying for example “table 3 does not correspond”. Make sure to point out <em>in which way</em> it does not correspond; The fact that it does not seem to correspond on your computer does not necessarily mean that it does not correspond on the author’s computer as well (see <a href="#environments">below on environments</a>).</li>
@@ -211,10 +258,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>In your report, try to adopt a pleasant and forthcoming tone of language, it will make any interaction easier.</li>
 </ol>
 </section>
-<section id="important-things-to-look-our-for" class="level1">
-<h1>Important Things to Look Our For 🧐</h1>
-<section id="hard-coded-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="hard-coded-numbers">Hard Coded Numbers</h2>
+<section id="important-things-to-look-our-for" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Important Things to Look Our For 🧐</h1>
+<section id="hard-coded-numbers" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="hard-coded-numbers"><span class="header-section-number">2.1</span> Hard Coded Numbers</h2>
 <ul>
 <li><p>Without proper documentation of how they were obtained, hard coded numbers are not admissible in code that generates results like plots or tables.</p></li>
 <li><p>Plots are particularly critical here.</p></li>
@@ -227,8 +274,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div></li>
 </ul>
-<section id="how-to-find-hard-coded-numbers" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-find-hard-coded-numbers">How to find hard coded numbers?</h3>
+<section id="how-to-find-hard-coded-numbers" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="how-to-find-hard-coded-numbers"><span class="header-section-number">2.1.1</span> How to find hard coded numbers?</h3>
 <p>Regular expressions (Regex) are the perfect tool for this. I recommend opening the full replication package in VScode. Here is an example. You can download the example package as usual from our dropbox at <code>EJ-2-submitted-replication-packages/Oswald-123456-R1</code>.</p>
 <ol type="1">
 <li><p>Open Package in VScode</p>
@@ -262,22 +309,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="missing-software-libraries-in-readme" class="level2">
-<h2 class="anchored" data-anchor-id="missing-software-libraries-in-readme">Missing Software Libraries in <code>README</code></h2>
+<section id="missing-software-libraries-in-readme" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="missing-software-libraries-in-readme"><span class="header-section-number">2.2</span> Missing Software Libraries in <code>README</code></h2>
 <ul>
 <li>It is very common that authors forget to list all required software libraries, or do not list the version information that goes with those libraries.</li>
 <li>Best practice would be to use an <em>empty system</em> where <em>no libraries are pre-installed</em>. The <em>nuvolos</em> platform is helpful here, because this is the case there.</li>
 </ul>
 </section>
 </section>
-<section id="environments" class="level1">
-<h1>Environments</h1>
+<section id="environments" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Environments</h1>
 <ul>
 <li>What is an environment?</li>
 <li>Why does my code not work on your computer?</li>
 </ul>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python"><code>python</code></h2>
+<section id="python" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="python"><span class="header-section-number">3.1</span> <code>python</code></h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -329,8 +376,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>There are two ways to create an environment: on the command line or by writing a <code>.yml</code> file.</p>
-<section id="creating-a-conda-env-on-the-command-line" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-conda-env-on-the-command-line">Creating a <code>conda env</code> on the command line</h3>
+<section id="creating-a-conda-env-on-the-command-line" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="creating-a-conda-env-on-the-command-line"><span class="header-section-number">3.1.1</span> Creating a <code>conda env</code> on the command line</h3>
 <p>This is easy.</p>
 <ol type="1">
 <li><p>Open a terminal in VScode via the command palette (type shift-cmd-p or click cogwheel bottom left). In the command palette type <code>create new terminal</code> and hit enter.</p></li>
@@ -402,8 +449,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>The preceding steps of starting a notebook - from the external drive <code>/space_mounts</code> is illustrated in this video:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/4-Pdk3AAxDs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<section id="creating-a-conda-env-via-a-.yml-file" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-conda-env-via-a-.yml-file">Creating a <code>conda env</code> via a <code>.yml</code> file</h4>
+<section id="creating-a-conda-env-via-a-.yml-file" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="creating-a-conda-env-via-a-.yml-file"><span class="header-section-number">3.1.1.1</span> Creating a <code>conda env</code> via a <code>.yml</code> file</h4>
 <p>We could have equally well created a full <em>recipe</em> file, from which to build this environment. This may be useful to share with authors. You would save that as <code>author-env.yml</code> for instance:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">name:</span> author-name</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dependencies:</span></span>
@@ -420,8 +467,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> author-env.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="creating-a-conda-env-from-a-supplie-.yml-file" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-conda-env-from-a-supplie-.yml-file">Creating a <code>conda env</code> from a supplie <code>.yml</code> file</h3>
+<section id="creating-a-conda-env-from-a-supplie-.yml-file" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="creating-a-conda-env-from-a-supplie-.yml-file"><span class="header-section-number">3.1.2</span> Creating a <code>conda env</code> from a supplie <code>.yml</code> file</h3>
 <p>Some authors actually give us such a file! In this case, the same applies:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">11:49:15</span> <span class="at">-</span> nuvolos:/files$ conda env create <span class="at">-f</span> /files/Replication_package_Agostini_Bloise_Tancioni/DML_python/environment.yml</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -456,8 +503,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="stata" class="level2">
-<h2 class="anchored" data-anchor-id="stata"><code>stata</code></h2>
+<section id="stata" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="stata"><span class="header-section-number">3.2</span> <code>stata</code></h2>
 <p>There is an excellent guide for how to lock in add-on stata packages into a certain state. By default, there is no mechanism in stata which would version add-on packages (the user is responsible to install the <em>correct</em> version - which may be extremely difficult in practice because older versions may no longer be retrievable).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -473,8 +520,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="julia" class="level2">
-<h2 class="anchored" data-anchor-id="julia"><code>julia</code></h2>
+<section id="julia" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="julia"><span class="header-section-number">3.3</span> <code>julia</code></h2>
 <p>Environment creating is built-in with base julia in the package manager. In any given directory, type <code>]</code> to enter <code>Pkg</code> mode. Here we create an environment at the current directory <code>.</code> and add two packages. The resulting files <code>Project.toml</code> and <code>Manifest.toml</code> encode the exact versions of all component packages (i.e.&nbsp;including dependencies of the packages we are asking for). Any user can use those 2 files to recreate the exact same software environment as the author.</p>
 <pre><code>(@v1.10) pkg&gt; activate .
   Activating new project at `~/replications/Oswald-123456/full-package/3-replication-package`
@@ -503,17 +550,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="data-citations-for-exeriments" class="level1">
-<h1>Data Citations for exeriments</h1>
+<section id="data-citations-for-exeriments" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Citations for exeriments</h1>
 <p>If you generate your own data via an experiment, of course you cannot cite it. If you use data from a previously published experiment, you could cite it. So: no, you don’t need either citation or a DAS if you use exclusively your own generated data. You do not need the zenodo DOI. you will obtain this at the very end of the process, so that people (including yourselves) can cite your package (including generated data) in the future.</p>
 </section>
-<section id="working-on-nuvolos" class="level1">
-<h1>Working on Nuvolos</h1>
+<section id="working-on-nuvolos" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Working on Nuvolos</h1>
 <blockquote class="blockquote">
 <p>Ask the Data Editor to create a new instance for you.</p>
 </blockquote>
-<section id="memory-consumption" class="level2">
-<h2 class="anchored" data-anchor-id="memory-consumption">Memory Consumption</h2>
+<section id="memory-consumption" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="memory-consumption"><span class="header-section-number">5.1</span> Memory Consumption</h2>
 <ul>
 <li>Nuvolos (and any shared resource like a HPC system) will strictly enforce memory (RAM) limits.</li>
 <li>If your app consumes more than what is available, the app will be killed. You will not get an error message in most cases, but your app will just freeze or shut down.</li>
@@ -521,8 +568,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><img src="img/nuvolos-memory1.png" class="img-fluid"></p>
 </section>
-<section id="large-files-on-nuvolos" class="level2">
-<h2 class="anchored" data-anchor-id="large-files-on-nuvolos">large files on nuvolos</h2>
+<section id="large-files-on-nuvolos" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="large-files-on-nuvolos"><span class="header-section-number">5.2</span> large files on nuvolos</h2>
 <p>You can try the web-based uploader which will take any URL directly:</p>
 <p><img src="img/nuvolos-large-upload.png" class="img-fluid"></p>
 <p>When copying the dropbox URL, remember to change ‘dl=0’ to ‘dl=1’ inside the URL. This forces the download. For example:</p>
@@ -537,14 +584,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For very large files, however, this does not work well and you need to use the <a href="https://docs.nuvolos.cloud/features/file-system-and-storage/mount-dropbox">dropbox sync integration</a>. This will map a specific folder in your dropbox onto your nuvolos instance at <code>/dropbox</code></p>
 </section>
 </section>
-<section id="r-gotchas" class="level1">
-<h1><code>R</code> gotchas</h1>
-<section id="the-grf-random-forests-package" class="level2">
-<h2 class="anchored" data-anchor-id="the-grf-random-forests-package">The <code>grf</code> Random Forests Package</h2>
+<section id="r-gotchas" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <code>R</code> gotchas</h1>
+<section id="the-grf-random-forests-package" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-grf-random-forests-package"><span class="header-section-number">6.1</span> The <code>grf</code> Random Forests Package</h2>
 <p>There is a well-documented problem with cross platform compatibility. Only a certain setting of the <code>regression_forest</code> command will reproduce results across different platforms. The setting concerns the arguments <code>num.threads</code> and <code>seed</code>. Please make sure those are set. Reference <a href="https://grf-labs.github.io/grf/REFERENCE.html#forests-predict-different-values-depending-on-the-platform-even-though-the-seed-is-the-same">here</a> and example <a href="https://github.com/grf-labs/grf/issues/793">issue here</a></p>
 </section>
-<section id="sharing-full-r-libraries-does-not-work-in-general" class="level2">
-<h2 class="anchored" data-anchor-id="sharing-full-r-libraries-does-not-work-in-general">Sharing Full <code>R</code> Libraries does not work in general</h2>
+<section id="sharing-full-r-libraries-does-not-work-in-general" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sharing-full-r-libraries-does-not-work-in-general"><span class="header-section-number">6.2</span> Sharing Full <code>R</code> Libraries does not work in general</h2>
 <ul>
 <li>you cannot just include your direct dependencies in an R package and hope that just works.</li>
 <li>By the way, <code>R</code> package need to be <em>installed</em> via a specific process (<code>install.packages</code>); it is <em>not</em> possible to copy a package directly into the local library location. For instance, for me this is</li>
@@ -576,8 +623,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  installation of package ‘Backup copies of other packages<span class="sc">/</span>bigtime_0.<span class="dv">2</span>.<span class="fl">2.</span>tar.gz’ had non<span class="sc">-</span>zero exit status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In general, <code>R</code> is difficult in this regard if we have complicated version environments. The most advertised solution is <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>, but I have to say that even this fails often for reasons outside the <code>R</code> environment, for example, a certain <code>C</code> compiler or <code>fortran</code> compiler with certain support libraries being needed to build a <em>specific</em> version of an outdate R package. While <code>renv</code> is a great step ahead, it is not a silver bullet.</p>
 </section>
-<section id="dealing-with-large-files" class="level2">
-<h2 class="anchored" data-anchor-id="dealing-with-large-files">Dealing with Large Files</h2>
+<section id="dealing-with-large-files" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="dealing-with-large-files"><span class="header-section-number">6.3</span> Dealing with Large Files</h2>
 <p>Large (data) files are complicated. Not only do they consume a lot of disk space, the real problem comes from transferring them over the internet. There may be losses along the way which invalidate the file.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -595,8 +642,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>CertUtil -hashfile file_to_check.csv MD5</code></pre>
 </div>
 </div>
-<section id="compression-of-files" class="level3">
-<h3 class="anchored" data-anchor-id="compression-of-files">Compression of files</h3>
+<section id="compression-of-files" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="compression-of-files"><span class="header-section-number">6.3.1</span> Compression of files</h3>
 <ul>
 <li>There are several compression technologies out there, indicated by various filename endings <code>.zip</code>, <code>.tar</code>, <code>.gz</code>, <code>.7z</code> etc.</li>
 <li></li>
