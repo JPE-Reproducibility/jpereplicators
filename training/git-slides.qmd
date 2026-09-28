@@ -46,16 +46,15 @@ author:
 * We only track code (i.e. text files!) with version control.
 * (We can track small datasets. Github has a 100MB file size limit)
 * In our JPE org, we will *never* track data with version control.
-* Data will be downloaded directly from the dataverse deposit, where authors submit their packages.
+* Data will be downloaded directly from dropbox, where authors submit their packages for review.
 
 ## Preview of JPE Workflow
 
 1. Each paper will get a github repository.
 2. The repo contains 
    1. all code contained in the package
-   2. the paper and the appendix pdfs, 
-   3. template code with my tools, 
-   4. and the reports I prepare for you and which you will edit.
+   2. template code with my tools, 
+   3. and the reports I prepare for you and which you will edit.
 3. You will *not* send me emails with pdfs, but you will _push a commit to this repo_.
 
 ::: {.fragment}

@@ -16,8 +16,10 @@ website:
     logo: img/jpe.jpg
     alignment: left
     contents: 
+      - href: workflow.qmd
+        text: Local Workflow
       - href: nuvolos.qmd
-        text: Nuvolos Setup
+        text: Nuvolos Workflow
       - href: training/git-prereq.qmd
         text: Pre workshop
       - href: training/git-slides.qmd

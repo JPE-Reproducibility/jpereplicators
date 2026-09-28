@@ -52,6 +52,8 @@ Do **not** copy the replication package anywhere else on your computer (maybe be
 
 :::
 
+Notice that this setup is performed automatically for you on nuvolos. Read more about this [here](nuvolos.qmd).
+
 ## First Compilation of report 
 
 1. Before doing anything else, open VScode at `~/JPE-replications/JPE-Oswald-66666666`.

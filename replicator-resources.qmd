@@ -1,5 +1,7 @@
 ---
 title: "Replicator Resources"
+toc: true
+number-sections: true
 ---
 
 This page contains tips and tricks for replicators.
